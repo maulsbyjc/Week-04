@@ -7,27 +7,40 @@ public class week04CodingProject {
 	/*
 	 * #1	
 	 */
+	
+	        int[] ages = {3, 9, 23, 64, 2, 8, 28, 93};
+
+	        int firstElementAges = ages[0];
+	        int lastElementAges = ages[ages.length - 1];
+	        int differenceAges = lastElementAges - firstElementAges;
+
+	        System.out.println("Difference (ages): " + differenceAges);
+
+	        
+	        int[] ages2 = {3, 9, 23, 64, 2, 8, 28, 93, 100}; // Added one more element
+
+	        int firstElementAges2 = ages2[0];
+	        int lastElementAges2 = ages2[ages2.length - 1];
+	        int differenceAges2 = lastElementAges2 - firstElementAges2;
+
+	        System.out.println("Difference (ages2): " + differenceAges2);
+
+	        
+	        double sum = 0;
+	        for (int age : ages) {
+	            sum+= age;
+	        }
+	        double averageAges = sum / ages.length;
+	        System.out.println("Average age (ages): " + averageAges);
+
+	        
+	        double sumAges2 = 0;
+	        for (int age : ages2) {
+	            sumAges2 += age;
+	        }
+	        double averageAges2 = sumAges2 / ages2.length;
+	        System.out.println("Average age (ages2): " + averageAges2);
 		
-		int[] ages = { 3, 9, 23, 64, 2, 8, 28, 93 }; 
-		int lengthOfArray = ages.length;
-		int difference = Math.abs(ages[lengthOfArray - lengthOfArray] - ages[lengthOfArray - 1]);
-		
-		System.out.println("Difference of first and last element in ages array = " + difference);
-		
-		int[] ages2 = { 2, 8, 22, 63, 5, 12, 27, 92, 15, 90 };
-		
-		lengthOfArray = ages2.length;
-		difference = Math.abs(ages2[lengthOfArray - lengthOfArray] - ages2[lengthOfArray - 1]);
-		
-		System.out.println("Difference of first and last element in ages2 array = " + difference);
-		
-		int sum = 0;
-		for (int index = 0; index < ages2.length; index++) {
-			sum += ages2[index];
-		}
-		
-		double average = sum / lengthOfArray;
-		System.out.println("The average age between both arrays = " + average );
 
 	/*
 	 * #2
@@ -180,7 +193,7 @@ String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
             
             public static boolean isSumGreaterThan100(int[] nums) {
                 if (nums == null || nums.length == 0) {
-                    return false; // Handle null or empty arrays
+                    return false; 
                 }
 
                 int sum = 0;
@@ -193,7 +206,7 @@ String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
                 
              public static double calculateAverage(double[] numbers) {
                     if (numbers == null || numbers.length == 0) {
-                        return 0.0; // Return 0.0 for null or empty arrays
+                        return 0.0; 
                     }
 
                     double sum = 0.0;
@@ -210,7 +223,7 @@ String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
                  return avg1 > avg2;
              }
 
-             // Helper method to calculate the average of a double array
+            
              double calculateAverage1(double[] numbers) {
                  if (numbers == null || numbers.length == 0) {
                      return 0.0;
@@ -230,10 +243,10 @@ String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
              
              public static String battingAverage(int atBats, int hits) {
                  if (atBats <= 0) {
-                     return "Invalid at bats."; // Handle invalid input
+                     return "Invalid at bats.";
                  }
 
-                 double average = (double) hits / atBats; // Calculate batting average
+                 double average = (double) hits / atBats;
 
                  if (average > 0.50) {
                      return "The player is hitting above .500";
